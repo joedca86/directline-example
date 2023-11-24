@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const authToken = "59p7F2s9ggY.6x5ICROi5VJFocVS7n-LW5Msz3iggrR4wb4YRYm0rIc";
 
 // Definir una ruta en Express que llame al método fetchData
@@ -93,6 +93,6 @@ async function getMessage(conversationId) {
 }
 
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
